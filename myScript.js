@@ -1,3 +1,3 @@
-fetch(https://api.hatchways.io/assessment/students)
+fetch('https://api.hatchways.io/assessment/students')
     .then(response => response.json())
-        .then(data => )
+    .then(data => console.log(data))
