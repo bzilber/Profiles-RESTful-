@@ -1,0 +1,1 @@
+Reminder: Sometimes we get stuck trying to make optimal code, but focus on refactoring later, after its built, given time constraint.

@@ -1,5 +1,5 @@
 var student = document.querySelector('#name');
-
+var contents = document.querySelector('.container');
 fetch('https://api.hatchways.io/assessment/students')
     .then(response => response.json())
     .then(data => {
