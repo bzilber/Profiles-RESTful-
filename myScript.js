@@ -7,6 +7,7 @@ fetch('https://api.hatchways.io/assessment/students')
     .then(data => {
         for (let i = 0; i < studentSize; i++) {
 
+            let imgValue = document.createElement("img");
             let nameValue = document.createElement("h1");
             let emailValue = document.createElement("p");
             let averageValue = document.createElement("p");
@@ -19,12 +20,12 @@ fetch('https://api.hatchways.io/assessment/students')
                 return Math.floor(total / 8);
             }
 
+            imgValue.src = data['students'][i]['pic'];
             nameValue.innerHTML = data['students'][i]['firstName'];
             emailValue.innerHTML = "Email: " + data['students'][i]['email'];
             averageValue.innerHTML = "Average: " + average() + "%";
 
-            //console.log(nameValue);
-            //student.innerHTML = nameValue;
+            contents.appendChild(imgValue);
             contents.appendChild(nameValue);
             contents.appendChild(emailValue);
             contents.appendChild(averageValue);
