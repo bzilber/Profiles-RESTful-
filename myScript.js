@@ -7,6 +7,7 @@ fetch('https://api.hatchways.io/assessment/students')
     .then(data => {
         for (let i = 0; i < studentSize; i++) {
 
+            let div = document.createElement("div");
             let imgValue = document.createElement("img");
             let nameValue = document.createElement("h1");
             let emailValue = document.createElement("p");
