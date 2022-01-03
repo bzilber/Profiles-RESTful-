@@ -1,6 +1,7 @@
-var student = document.querySelector('#name');
+//var student = document.querySelector('#name');
 var container = document.querySelector('.container');
 var containerItem = document.querySelector('.container-item');
+//var profilePic = document.querySelector('.img')
 var studentSize = 24;
 
 fetch('https://api.hatchways.io/assessment/students')
@@ -8,10 +9,26 @@ fetch('https://api.hatchways.io/assessment/students')
     .then(data => {
         for (let i = 0; i < studentSize; i++) {
 
+            //for profile pic containers
             let containerized = document.createElement(`containerItem`);
+            let imgValue = document.createElement(`img`);
+            let c = document.createElement('canvas');
+
+            imgValue.setAttribute("width", "170");
+            imgValue.setAttribute("color", "white");
+            imgValue.setAttribute("border-radius", "50%");
+
+            // ctx.beginPath();
+            // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            // ctx.stroke();
+            // imgValue.appendChild(ctx);
+
+            imgValue.src = data['students'][i]['pic'];
+            containerized.appendChild(imgValue);
             container.appendChild(containerized);
 
-            let imgValue = document.createElement("img");
+
+            //for info containers
             let containerized1 = document.createElement(`containerItem`);
             container.appendChild(containerized1);
             let nameValue = document.createElement("h1");
@@ -26,16 +43,20 @@ fetch('https://api.hatchways.io/assessment/students')
                 return Math.floor(total / 8);
             }
 
-            imgValue.src = data['students'][i]['pic'];
+
             nameValue.innerHTML = data['students'][i]['firstName'];
             emailValue.innerHTML = "Email: " + data['students'][i]['email'];
             averageValue.innerHTML = "Average: " + average() + "%";
 
-            containerized.appendChild(imgValue);
-            containerized.appendChild(nameValue);
-            containerized.appendChild(emailValue);
-            containerized.appendChild(averageValue);
+            containerized1.appendChild(nameValue);
+            containerized1.appendChild(emailValue);
+            containerized1.appendChild(averageValue);
 
         }
     })
-//container.appendChild(container);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
