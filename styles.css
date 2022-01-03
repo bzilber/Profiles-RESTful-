@@ -1,14 +1,31 @@
-.container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: #2196F3;
-    padding: 10px;
+body{
+    background-color: lightblue;
 }
 
 .container-item{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: green;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+
+}
+
+.profile {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: green;
+  }
+
+.container{
+    display: inline-grid;
+    grid-template-columns: 1fr 2fr;
+    border: thick double #32a1ce;
+    margin: 2em;
+    background-color: whitesmoke;
+    border-radius: 25px;
+
 }
