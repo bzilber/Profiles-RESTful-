@@ -13,7 +13,7 @@ fetch('https://api.hatchways.io/assessment/students')
             let containerized = document.createElement(`containerItem`);
             let imgValue = document.createElement(`img`);
 
-            imgValue.setAttribute("width", "170");
+            imgValue.setAttribute("width", "150");
             imgValue.setAttribute("class", "img-rounded-border");
 
             imgValue.src = data['students'][i]['pic'];

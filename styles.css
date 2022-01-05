@@ -31,6 +31,9 @@ body{
 }
 
 .img-rounded-border {
-    border:5px solid red;
+    border:1px solid grey;
     border-radius:50%;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
   }
