@@ -12,16 +12,9 @@ fetch('https://api.hatchways.io/assessment/students')
             //for profile pic containers
             let containerized = document.createElement(`containerItem`);
             let imgValue = document.createElement(`img`);
-            let c = document.createElement('canvas');
 
             imgValue.setAttribute("width", "170");
-            imgValue.setAttribute("color", "white");
-            imgValue.setAttribute("border-radius", "50%");
-
-            // ctx.beginPath();
-            // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-            // ctx.stroke();
-            // imgValue.appendChild(ctx);
+            imgValue.setAttribute("class", "img-rounded-border");
 
             imgValue.src = data['students'][i]['pic'];
             containerized.appendChild(imgValue);
@@ -54,9 +47,3 @@ fetch('https://api.hatchways.io/assessment/students')
 
         }
     })
-
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-ctx.stroke();

@@ -29,3 +29,8 @@ body{
     border-radius: 25px;
 
 }
+
+.img-rounded-border {
+    border:5px solid red;
+    border-radius:50%;
+  }
