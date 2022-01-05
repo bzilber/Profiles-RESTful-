@@ -1,5 +1,9 @@
-body{
+body {
+    font-family: 'Raleway', sans-serif;
     background-color: lightblue;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .container-item{
@@ -27,7 +31,6 @@ body{
     margin: 2em;
     background-color: whitesmoke;
     border-radius: 25px;
-
 }
 
 .img-rounded-border {

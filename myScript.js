@@ -25,6 +25,8 @@ fetch('https://api.hatchways.io/assessment/students')
             let containerized1 = document.createElement(`containerItem`);
             container.appendChild(containerized1);
             let nameValue = document.createElement("h1");
+            let companyValue = document.createElement("p");
+            let skillValue = document.createElement("p");
             let emailValue = document.createElement("p");
             let averageValue = document.createElement("p");
 
@@ -37,13 +39,18 @@ fetch('https://api.hatchways.io/assessment/students')
             }
 
 
-            nameValue.innerHTML = data['students'][i]['firstName'];
+            nameValue.innerHTML = data['students'][i]['firstName'].toUpperCase() + ' ' + data['students'][i]['lastName'].toUpperCase();
+            skillValue.innerHTML = "Skill: " + data['students'][i]['skill'];
+            companyValue.innerHTML = "Company: " + data['students'][i]['company'];
             emailValue.innerHTML = "Email: " + data['students'][i]['email'];
             averageValue.innerHTML = "Average: " + average() + "%";
 
             containerized1.appendChild(nameValue);
             containerized1.appendChild(emailValue);
+            containerized1.appendChild(skillValue);
+            containerized1.appendChild(companyValue);
             containerized1.appendChild(averageValue);
+
 
         }
     })
