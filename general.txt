@@ -1,3 +1,3 @@
 Reminder: Sometimes we get stuck trying to make optimal code, but focus on refactoring later, after its built, given time constraint.
 
-Lesson: Even classes/id can be used in e.setAttribute (to clean up styling) e.g.img-rounded-border
+Lesson: Even classes/id can be used in e.setAttribute (say to clean up styling) e.g.img-rounded-border
