@@ -6,6 +6,17 @@ body {
 
 }
 
+p {
+      font-size: 0.8em;
+      margin: 0.5em;
+}
+
+h1 {
+    font-size: 1.2em;
+    margin: 0.5em;
+}
+
+
 .container-item{
     background-color: green;
     border: 1px solid rgba(0, 0, 0, 0.8);
