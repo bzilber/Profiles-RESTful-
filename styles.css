@@ -1,17 +1,18 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
     background-color: lightblue;
-    align-items: center;
-    justify-content: center;
     width: auto;
     max-width: 68rem;
-    margin: 0 auto;
   }
   
-  @media screen and (min-width: 620px) {
+  @media screen and (min-width: 820px) {
     body {
       font-size: 1.9rem;
-      line-height: 1.31579;
+      line-height: 0.8;
     }
   }
 
