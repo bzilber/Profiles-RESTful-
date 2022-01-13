@@ -3,10 +3,19 @@ body {
     background-color: lightblue;
     align-items: center;
     justify-content: center;
+    width: auto;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  
+  @media screen and (min-width: 620px) {
+    body {
+      font-size: 1.9rem;
+      line-height: 1.31579;
+    }
+  }
 
-}
-
-p {
+  p {
       font-size: 0.8em;
       margin: 0.5em;
 }
@@ -24,6 +33,7 @@ h1 {
     font-size: 30px;
     text-align: center;
 
+
 }
 
 .profile {
@@ -36,18 +46,24 @@ h1 {
   }
 
 .container{
+
     display: inline-grid;
     grid-template-columns: 1fr 2fr;
     border: thick double #32a1ce;
-    margin: 2em;
-    background-color: whitesmoke;
+    background-color: lightcyan;
     border-radius: 25px;
+    justify-items: center;    
+    align-items: center;
+
+ 
 }
 
 .img-rounded-border {
     border:1px solid grey;
+    background-color: white;
     border-radius:50%;
     display: block;
     margin: auto;
     margin-top: 2em;
+    margin-left: 2em;
   }
